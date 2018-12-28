@@ -1,7 +1,6 @@
 import $ from 'jquery'
 import { onLoadHtmlSuccess } from '../core/includes'
 import { configurarLinks, marcarLinkComoSelecionado } from '../core/navigator'
-import './infinityScroll'
 import { jScroll } from './infinityScroll'
 import { loadCurso } from './loadCurso';
 
