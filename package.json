@@ -4,7 +4,7 @@
   "description": "",
   "main": "servidor.js",
   "scripts": {
-    "start": "npm start",
+    "start": "node servidor.js",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
