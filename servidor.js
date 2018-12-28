@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res, next) => {
-    res.sendFile('/index.html');
+    res.send('/#/pages/cursos.html');
 })
 
 app.listen(porta, () => {
