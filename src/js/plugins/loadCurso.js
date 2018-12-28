@@ -5,7 +5,6 @@ import { loadUrl } from './loadCursos';
 export function loadCurso() {
     $('.link').click(function () {
         const url = this.href.split('#')
-        console.log(this.href)
         const id = url[1].split('?page=')
         navegarViaAjax(url[1], function () { $('[wm-curso]').cursoDiv(id[1]) })
     })

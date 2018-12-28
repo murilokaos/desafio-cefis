@@ -8,17 +8,16 @@ export function jScroll() {
         $('.load-more').addClass('fa-spin')
         setTimeout(() => {
             $('.load-more').removeClass('fa-spin')
-            $("div[style|='display:none']").each((i, e) => {
+            $("div[hide|='true']").each((i, e) => {
                 if (i < $('[wm-cursos]').attr('limit')) {
-                    $(e).attr('style', '')
+                    $(e).removeClass('d-none')
+                    $(e).removeAttr('hide')
+                    $(e).parent().removeAttr('hide')
                 }
             })
+            $('.d-none').each(e => { $(e) === null ? $('.load-more').addClass('d-none') : ''})
             $('[wm-category-select]').categorySelect()
         }, 500)
     })
-    if($("div[style|='display:none']").each()){
-        $('.load-more').each((i, e) => $(e).attr('style', 'display:none'))
-    }
-    
 }
 

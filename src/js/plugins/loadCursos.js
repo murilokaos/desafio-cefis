@@ -25,7 +25,6 @@ $.fn.cursosDiv = function (limit) {
     } else {
         mapDiv(objCursos, $(this), limit)
     }
-
     return $(this)
 }
 
@@ -57,14 +56,15 @@ function mapDiv(nArray, ts, limit){
                         </a>
                     </div>
                 </div>`
-        if(ix < limit-1){
+        if(ix < limit){
             ts.append(divCurso)
         }else{
             hide = 'true'
-            $('[hide|=true]').addClass('d-none')
             ts.append(divCurso)
+            $('[hide|=true]').addClass('d-none')
         }
     })
+    
 }
 
 onLoadHtmlSuccess(function () {
