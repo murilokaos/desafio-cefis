@@ -2,9 +2,9 @@
   "name": "desafio_cefis_murilo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "servidor.js",
   "scripts": {
-    "start": "npm start ./servidor.js",
+    "start": "npm start",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
