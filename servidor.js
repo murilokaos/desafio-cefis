@@ -1,3 +1,4 @@
+const port = process.env.PORT || 3000
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -9,6 +10,6 @@ app.get('/', (req, res, next) => {
     res.sendFile('index.html');
 })
 
-app.listen(porta, () => {
-    console.log(`O servidor está rodando na porta ${NODE_ENV.port}.`)
+app.listen(port, () => {
+    console.log(`O servidor está rodando na porta ${port}.`)
 })
