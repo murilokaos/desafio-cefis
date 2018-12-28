@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import InfiniteScroll from 'infinite-scroll'
 import './categorySelect'
 
 export function jScroll() {
