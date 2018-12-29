@@ -17,7 +17,9 @@ export function loadUrl(u) {
 
 $.fn.cursosDiv = function (limit) {
     if (objCursos === null) {
-        new Promise((res, err) => { res(loadUrl(url)) })
+        new Promise((res, err) => { res(loadUrl(url)) 
+        $('.load-more').addClass('fa-spin')
+    })
             .then(resp => {
                 sessionStorage.setItem('cursos', JSON.stringify(resp.data))
                 objCursos = resp.data
@@ -64,8 +66,10 @@ function mapDiv(nArray, ts, limit){
             ts.append(divCurso)
             $('[hide|=true]').addClass('d-none')
         }
+        if(ix === array.length-1) {
+            setTimeout(() => {$('.load-more').removeClass('fa-spin')}, 2000)
+        }
     })
-    
 }
 
 onLoadHtmlSuccess(function () {

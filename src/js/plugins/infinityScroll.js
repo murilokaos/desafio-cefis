@@ -1,16 +1,8 @@
 import $ from 'jquery'
+
 import './categorySelect'
 
 export function jScroll() {
-
-    $('[wm-cursos]').each(() => {
-        if($(this).children.length === 0){
-           $('.load-more').addClass('fa-spin')
-        }else{
-            $('.load-more').removeClass('fa-spin')
-        }
-    })
-
     $('.load-more').click(e => {
 
         $('.load-more').addClass('fa-spin')
