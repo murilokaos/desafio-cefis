@@ -21,6 +21,7 @@ $.fn.cursoDiv = function (id) {
     new Promise((res, err) => {
         res(loadUrl(urlCurso))
     }).then(resp => {
+        $('[wm-titulo]').html(`<i class="fa fa-book"></i> ${resp.data.title}`)
         const divCurso = `
                 <div class="row">
                     <div class="col-12">
