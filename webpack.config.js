@@ -26,7 +26,7 @@ module.exports = {
     output: {
         filename: './assets/js/app.min.js',
         path: path.resolve(__dirname, 'public'),
-        publicPath: 'public/'
+        publicPath: '/'
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: './assets/css/app.min.css' }),
