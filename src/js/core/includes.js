@@ -1,7 +1,5 @@
 import $ from 'jquery'
 
-import '../plugins/loadCursos'
-
 const loadHtmlSuccessCallbacks = []
 
 export function onLoadHtmlSuccess(callback){

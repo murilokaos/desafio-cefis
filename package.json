@@ -2,10 +2,11 @@
   "name": "desafio_cefis_murilo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "servidor.js",
   "scripts": {
-    "start": "npm start ./servidor.js",
-    "build": "cross-env NODE_ENV=production webpack"
+    "start": "node servidor.js",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
@@ -13,14 +14,15 @@
   "devDependencies": {
     "bootstrap": "^4.1.2",
     "copy-webpack-plugin": "4.5.1",
-    "cross-env": "5.1.5",
+    "cross-env": "^5.1.5",
     "css-loader": "0.28.11",
     "file-loader": "1.1.11",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
     "mini-css-extract-plugin": "0.4.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "4.0.1",
-    "popper.js": "1.14.3",
+    "popper.js": "^1.14.3",
     "postcss-loader": "2.1.5",
     "resolve-url-loader": "^3.0.0",
     "sass-loader": "7.0.1",
@@ -32,9 +34,6 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "4.16.2",
-    "file-saver": "^2.0.0",
-    "infinite-scroll": "^3.0.5",
-    "jquery": "^3.3.1"
+    "express": "^4.16.4"
   }
 }
