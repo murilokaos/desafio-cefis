@@ -33,14 +33,14 @@ $.fn.cursoDiv = function (id) {
                     </div>
                 </div>
             <div class="row">
-                <div class="col-12 col-lg-6 col-md-6 mb-2">
+                <div class="col-12 col-lg-6 col-md-6 mb-4">
                     <div class="video">
                         <video controls title="Trailer do curso ${resp.data.id} - ${resp.data.title}">
-                            <source src="${resp.data.video_promocional}" type="video/mp4">
+                            <source src="${resp.data.video_promocional}">
                         </video>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 col-md-6 mb-2">
+                <div class="col-12 col-lg-6 col-md-6 mb-4">
                     <div class="sobre-curso">
                         <div class="banner-curso mt-2">
                             <img src="${resp.data.banner}" alt="" class="img-fluid" />
