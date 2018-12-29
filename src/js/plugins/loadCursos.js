@@ -2,7 +2,8 @@ import $ from 'jquery'
 import { onLoadHtmlSuccess } from '../core/includes'
 import { configurarLinks, marcarLinkComoSelecionado } from '../core/navigator'
 import { jScroll } from './infinityScroll'
-import { loadCurso } from './loadCurso';
+import { loadCurso } from './loadCurso'
+import './categorySelect'
 
 const url = 'https://cefis.com.br/api/v1/event'
 let objCursos = JSON.parse(sessionStorage.getItem('cursos'))
@@ -20,6 +21,7 @@ $.fn.cursosDiv = function (limit) {
             .then(resp => {
                 sessionStorage.setItem('cursos', JSON.stringify(resp.data))
                 objCursos = resp.data
+                mapDiv(objCursos, $(this), limit)
             })
     } else {
         mapDiv(objCursos, $(this), limit)

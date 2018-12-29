@@ -1,7 +1,5 @@
 import $ from 'jquery'
 
-import '../plugins/loadCursos'
-
 const loadHtmlSuccessCallbacks = []
 
 export function onLoadHtmlSuccess(callback){
@@ -23,7 +21,7 @@ export function loadIncludes(parent){
                 loadHtmlSuccessCallbacks.forEach(
                     callback => callback(data))
                     // function () { ${'[wm-cursos]'}.cityButtons()}
-                //loadIncludes(e)
+                loadIncludes(e)
             }
         })
     })
