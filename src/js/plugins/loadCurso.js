@@ -27,9 +27,15 @@ $.fn.cursoDiv = function (id) {
             return `${Math.round(c[0])} horas e ${Math.round(c[1], 1)} minutos`
         }
         let classe = ''
-        resp.data.classes.map((cl, idx) => classe += (
+        console.log(resp.data.classes.length === 0 ? 'nulo':'nao nulo')
+        if(resp.data.classes.length !== 0) {
+            resp.data.classes.map((cl, idx) => classe += (
             `<li class="list-group-item"><i class="fa fa-play-circle-o fa-1" aria-hidden="true">
             </i><span>${idx + 1} - ${cl.title}</span></li>`))
+        }else{
+            classe += (
+                `<li class="list-group-item"><span>Não foram definidas aulas para este módulo!</span></li>`)
+        }
         const divCursoH = `
                     <div class="row">
                     <div class="col-12">
