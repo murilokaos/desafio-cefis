@@ -1,0 +1,125 @@
+.painel {
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 9px 23px rgba(0, 0, 0, 0.09), 0 5px 5px rgba(0, 0, 0, 0.06);
+}
+
+.produto {
+    background-color: #FFF;
+    box-shadow: 0 9px 23px rgba(0, 0, 0, 0.09), 0 5px 5px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    position: relative;
+}
+
+.painel h2, .produto h2, .produto a{
+    font-weight: 400;
+    margin-top: 10px;
+    color: #FFF;
+    background-color: transparent;
+}
+
+.produto {
+    font-family: $fonte-secundaria;
+}
+
+.produto a:hover{
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+
+.produto .painel:hover {
+    box-shadow: 0 9px 23px rgba(105, 105, 105, 0.09), 0 5px 5px rgba(37, 31, 31, 0.26);
+}
+
+.produto img {
+    min-width: 100%;
+    min-height: 170px;
+    display: block;
+}
+
+.produto .banner-curso {
+    margin-top: 40px;
+    height: 170px;
+    position: relative;
+    z-index: 1;
+}
+
+.produto .banner-curso:after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#CC000000', endColorstr='#00000000');
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…Igd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g);
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0.8)),color-stop(100%, rgba(0,0,0,0)));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+}
+
+.produto .info {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.produto .info h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+    color: #FFF;
+}
+
+.produto .info h5 {
+    font-size: .8rem;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+}
+
+.produto .info .titulo {
+    background-color: #191B27;
+    padding: 5px 10px 5px;
+    box-sizing: border-box;
+}
+
+.produto .info .subtitulo {
+    background-color: #4D88A8;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px 5px;
+}
+
+.produto .buttonInfo {
+    left: -100%;
+    color: #ffffff;
+    position: absolute;
+    bottom: 30px;
+    z-index: 3;
+    font-size: 13px;
+    background-color: #191B27;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+}
+
+.produto:hover .buttonInfo {
+    left: 0;
+}
+
+.produto .nome-professor h6 {
+    padding: 5px 10px;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 12px;
+}
+
+.produto .nome-professor h6 span {
+    text-transform: uppercase;
+}
