@@ -68,6 +68,7 @@ function mapDiv(nArray, ts, limit){
         }
         if(ix === array.length-1) {
             setTimeout(() => {$('.load-more').removeClass('fa-spin')}, 2000)
+            $('[wm-category-select]').categorySelect()
         }
     })
 }
