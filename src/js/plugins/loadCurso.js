@@ -21,6 +21,7 @@ $.fn.cursoDiv = function (id) {
     new Promise((res, err) => {
         res(loadUrl(urlCurso))
     }).then(resp => {
+        $('[wm-titulo]').html(`<i class="fa fa-book"></i> ${resp.data.title}`)
         let getDuration = (d) => {
             let c = d.substring().split(":")
             return `${Math.round(c[0])} horas e ${Math.round(c[1], 1)} minutos`
